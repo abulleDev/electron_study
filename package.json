@@ -1,0 +1,20 @@
+{
+  "name": "electron_study",
+  "version": "1.0.0",
+  "private": true,
+  "description": "An Electron project created for learning Electron",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abulleDev/electron_study.git"
+  },
+  "author": "abulleDev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abulleDev/electron_study/issues"
+  },
+  "homepage": "https://github.com/abulleDev/electron_study#readme"
+}
