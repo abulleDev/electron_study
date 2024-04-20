@@ -1,5 +1,9 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
+
+ipcMain.handle('sendMessage', (event, message) => {
+  return `The message you sent is "${message}".`;
+});
 
 const createWindow = () => {
   const win = new BrowserWindow({
