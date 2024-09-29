@@ -6,6 +6,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
+    "build": "node ./build.js",
     "build:win": "electron-packager . --platform=win32 --arch=x64,arm64 --asar --out=out",
     "build:mac": "electron-packager . --platform=darwin --arch=x64,arm64 --asar --out=out",
     "build:linux": "electron-packager . --platform=linux --arch=x64,arm64 --asar --out=out"
