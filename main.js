@@ -7,6 +7,10 @@ ipcMain.handle('sendMessage', (event, message) => {
   return `The message you sent is "${message}".`;
 });
 
+ipcMain.handle('appVersion', (event) => {
+  return app.getVersion();
+});
+
 const createWindow = () => {
   const win = new BrowserWindow({
     width: 800,

@@ -8,4 +8,5 @@ contextBridge.exposeInMainWorld('versions', {
 
 contextBridge.exposeInMainWorld('communication', {
   sendMessage: (message) => ipcRenderer.invoke('sendMessage', message),
+  getAppVersion: () => ipcRenderer.invoke('appVersion'),
 });
