@@ -20,7 +20,11 @@ const createWindow = () => {
     },
   });
 
-  win.loadFile('index.html');
+  if (process.env.DEV_MODE) {
+    win.loadURL('http://localhost:5173');
+  } else {
+    win.loadFile('./dist/index.html');
+  }
 };
 
 app.whenReady().then(() => {
