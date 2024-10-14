@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "description": "An Electron project created for learning Electron",
-  "main": "main.js",
+  "main": "./src/main/main.js",
   "scripts": {
-    "dev": "node dev.js",
+    "dev": "node ./dev.js",
     "start": "vite build && electron .",
     "build": "node ./build.js",
     "build:win": "electron-packager . --platform=win32 --arch=x64,arm64 --asar --out=out",

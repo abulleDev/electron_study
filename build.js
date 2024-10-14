@@ -1,4 +1,4 @@
-const packager = require('@electron/packager')
+const packager = require('@electron/packager');
 
 packager({
   dir: '.',
@@ -9,4 +9,4 @@ packager({
   arch: ['x64', 'arm64'],
   overwrite: true,
   asar: true,
-})
+});
