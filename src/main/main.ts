@@ -1,5 +1,5 @@
-const { app, BrowserWindow, ipcMain, autoUpdater } = require('electron');
-const path = require('path');
+import { app, BrowserWindow, ipcMain, autoUpdater } from 'electron';
+import path from 'path';
 
 if (require('electron-squirrel-startup')) app.quit();
 
@@ -31,11 +31,11 @@ app.whenReady().then(() => {
   createWindow();
 });
 
-autoUpdater.setFeedURL(
-  `https://update.electronjs.org/abulleDev/electron_study/${process.platform}-${
-    process.arch
-  }/${app.getVersion()}`
-);
+autoUpdater.setFeedURL({
+  url: `https://update.electronjs.org/abulleDev/electron_study/${
+    process.platform
+  }-${process.arch}/${app.getVersion()}`,
+});
 autoUpdater.checkForUpdates();
 
 autoUpdater.on('update-downloaded', () => {

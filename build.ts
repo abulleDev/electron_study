@@ -1,4 +1,4 @@
-const packager = require('@electron/packager');
+import packager from '@electron/packager';
 
 packager({
   dir: '.',
