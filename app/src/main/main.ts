@@ -1,8 +1,6 @@
 import { app, BrowserWindow, ipcMain, autoUpdater } from 'electron';
 import path from 'path';
 
-if (require('electron-squirrel-startup')) app.quit();
-
 ipcMain.handle('sendMessage', (event, message) => {
   return `The message you sent is "${message}".`;
 });
@@ -23,7 +21,7 @@ const createWindow = () => {
   if (process.env.DEV_MODE) {
     win.loadURL('http://localhost:5173');
   } else {
-    win.loadFile('./dist/index.html');
+    win.loadFile('./index.html');
   }
 };
 

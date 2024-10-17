@@ -5,8 +5,8 @@
     "outDir": "dist",
     "strict": true,
     "resolveJsonModule": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "jsx": "react-jsx"
   },
-  "include": ["./app/src/**/*"],
-  "exclude": ["./app/src/renderer/**/*"]
+  "include": ["./src/renderer/**/*"]
 }

@@ -5,9 +5,8 @@
   "description": "An Electron project created for learning Electron",
   "main": "./dist/main/main.js",
   "scripts": {
-    "dev": "tsc && ts-node ./dev.ts",
-    "start": "vite build && tsc && electron .",
-    "build": "ts-node ./build.ts",
+    "dev": "tsc && ts-node ./script/dev.ts",
+    "build": "vite build ./app --outDir ../dist && tsc && ts-node ./script/build.ts",
     "build:win": "electron-packager . --platform=win32 --arch=x64,arm64 --asar --out=out",
     "build:mac": "electron-packager . --platform=darwin --arch=x64,arm64 --asar --out=out",
     "build:linux": "electron-packager . --platform=linux --arch=x64,arm64 --asar --out=out"
@@ -25,18 +24,11 @@
   "devDependencies": {
     "@electron/packager": "^18.3.2",
     "@types/node": "^20.16.11",
-    "@types/react": "^18.3.11",
-    "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.2",
     "concurrently": "^9.0.1",
     "electron": "^30.0.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.3",
     "vite": "^5.4.8"
-  },
-  "dependencies": {
-    "electron-squirrel-startup": "^1.0.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
   }
 }
