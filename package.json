@@ -6,7 +6,7 @@
   "main": "./dist/main/main.js",
   "scripts": {
     "dev": "tsc && ts-node ./script/dev.ts",
-    "build": "vite build ./app --outDir ../dist && tsc && ts-node ./script/build.ts",
+    "build": "vite build ./app && tsc && ts-node ./script/build.ts",
     "build:win": "electron-packager . --platform=win32 --arch=x64,arm64 --asar --out=out",
     "build:mac": "electron-packager . --platform=darwin --arch=x64,arm64 --asar --out=out",
     "build:linux": "electron-packager . --platform=linux --arch=x64,arm64 --asar --out=out"
