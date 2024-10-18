@@ -9,7 +9,8 @@
     "build": "ts-node ./script/build.ts",
     "build:win": "cross-env PLATFORM=win32 npm run build",
     "build:mac": "cross-env PLATFORM=darwin npm run build",
-    "build:linux": "cross-env PLATFORM=linux npm run build"
+    "build:linux": "cross-env PLATFORM=linux npm run build",
+    "package": "ts-node ./script/package.ts"
   },
   "repository": {
     "type": "git",
@@ -28,8 +29,12 @@
     "concurrently": "^9.0.1",
     "cross-env": "^7.0.3",
     "electron": "^30.0.1",
+    "electron-winstaller": "^5.4.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.3",
     "vite": "^5.4.8"
+  },
+  "dependencies": {
+    "zip-lib": "^1.0.4"
   }
 }
