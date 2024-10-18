@@ -6,10 +6,10 @@
   "main": "./dist/main/main.js",
   "scripts": {
     "dev": "tsc && ts-node ./script/dev.ts",
-    "build": "vite build ./app && tsc && ts-node ./script/build.ts",
-    "build:win": "electron-packager . --platform=win32 --arch=x64,arm64 --asar --out=out",
-    "build:mac": "electron-packager . --platform=darwin --arch=x64,arm64 --asar --out=out",
-    "build:linux": "electron-packager . --platform=linux --arch=x64,arm64 --asar --out=out"
+    "build": "ts-node ./script/build.ts",
+    "build:win": "cross-env PLATFORM=win32 npm run build",
+    "build:mac": "cross-env PLATFORM=darwin npm run build",
+    "build:linux": "cross-env PLATFORM=linux npm run build"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
     "@types/node": "^20.16.11",
     "@vitejs/plugin-react": "^4.3.2",
     "concurrently": "^9.0.1",
+    "cross-env": "^7.0.3",
     "electron": "^30.0.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.3",
