@@ -5,7 +5,7 @@ import { execSync } from 'child_process';
 
 const rootPath = path.join(__dirname, '..');
 const appDistPath = path.join(rootPath, 'dist');
-const outParh = path.join(rootPath, 'out');
+const outPath = path.join(rootPath, 'out');
 
 // Build renderer
 execSync('vite build ./app', { cwd: rootPath, stdio: 'inherit' });
@@ -26,7 +26,7 @@ execSync('npm install', { cwd: appDistPath, stdio: 'inherit' });
 const platform = process.env.PLATFORM ?? ['win32', 'darwin', 'linux'];
 packager({
   dir: appDistPath,
-  out: outParh,
+  out: outPath,
   appVersion: '1.0.0',
   icon: './app/assets/icons/icon',
   platform: platform,
