@@ -1,6 +1,8 @@
 import { app, BrowserWindow, ipcMain, autoUpdater } from 'electron';
 import path from 'path';
 
+if (require('electron-squirrel-startup')) app.quit();
+
 ipcMain.handle('sendMessage', (event, message) => {
   return `The message you sent is "${message}".`;
 });
